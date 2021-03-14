@@ -1,0 +1,84 @@
+.main-screen
+    width: 100%
+    min-height: 100%
+    &__background
+        width: 100%
+        min-height: 100%
+        background-color: #fff
+        background-size: cover
+        background-repeat: no-repeat
+        background-position-x: 90%
+    .container
+        height: 100%
+        padding: 120px 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &-promotion
+        &__heading
+            width: 50%
+            text-align: center
+            height: auto
+            font-weight: 600
+            color: var(--accent-color)
+            margin: 0 0 30px 0
+            .accent-text
+                font-weight: 700
+                font-size: 250px
+                line-height: 100%
+    &-heading
+        margin: 0 0 0 10%
+        &__title
+            font-weight: 400
+            font-size: 96px
+            line-height: 120%
+        &__text
+            font-size: 48px
+            text-transform: uppercase
+            font-weight: 700
+            line-height: 120%
+    &-options
+        margin: 15px 0 15px 10%
+        display: flex
+        font-size: 14px
+        &__item
+            &::before
+                content: '\2022'
+                display: inline-block
+                color: var(--accent-color)
+                margin-top: -5px
+                font-size: 30px
+                width: 1em
+                text-align: center
+                vertical-align: middle
+            &:first-child
+                &::before
+                    display: none
+    &-btn
+        margin: 60px 0 0 10%
+@media screen and ( max-width: 768px )
+    .main-screen
+        &-promotion
+            &__heading
+                width: 80%
+                font-size: 14px
+                .accent-text
+                    font-size: 120px
+        &-heading
+            &__title
+                font-size: 48px
+            &__text
+                font-size: 18px
+        &-options
+            flex-direction: column
+            &__item
+                &:first-child
+                    &::before
+                        display: inline-block
+
+@media screen and ( max-width: 540px )
+    .main-screen
+        &-btn
+            width: 100%
+            margin: 60px auto 0 auto
+            text-align: center
