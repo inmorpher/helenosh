@@ -707,6 +707,17 @@ a {
   }
 }
 
+@media screen and (max-width: 540px) {
+  .content-video {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .content-video video {
+    margin: 0 0 20px 0;
+    width: 95%;
+  }
+}
+
 /* Import REVIEW styles */
 .review {
   padding: 50px 0;
