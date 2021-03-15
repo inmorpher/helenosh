@@ -12,7 +12,6 @@ if (
   agrement.classList.add('agrement__visible');
 }
 
-console.log(Date.now() - localStorage.agree > 360000);
 // TOOGLE MODAL FUNCTION
 const toogleModal = arg => {
   if (arg == 'open') {

@@ -615,7 +615,7 @@ a {
 
 /* Import MASTER styles */
 .content {
-  padding: 50px 0 20px 0;
+  padding: 50px 0 50px 0;
 }
 
 .content-master {
@@ -646,6 +646,23 @@ a {
   border-radius: 15px;
 }
 
+.content-video {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content-video video {
+  display: inline-block;
+  width: 45%;
+  height: 50%;
+  border-radius: 15px;
+}
+
 .content-intro {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
@@ -660,7 +677,7 @@ a {
 }
 
 .content-intro__btn {
-  margin: 50px 0 0 0;
+  margin: 50px 0;
   text-align: center;
 }
 
@@ -692,7 +709,8 @@ a {
 
 /* Import REVIEW styles */
 .review {
-  padding: 30px 0;
+  padding: 50px 0;
+  background: #f8f8f8;
 }
 
 .review .container {
@@ -734,7 +752,7 @@ a {
 }
 
 .review-btn {
-  margin: 30px 0 0 0;
+  margin: 50px 0;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   text-align: right;
@@ -765,7 +783,7 @@ a {
 
 /* Import COMMENTS styles */
 .comments {
-  padding: 40px;
+  padding: 50px 0;
 }
 
 .comments-title {
@@ -828,7 +846,7 @@ a {
 /* Import FOOTER styles */
 .footer {
   background: #f8f8f8;
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .footer .container {
@@ -869,6 +887,7 @@ a {
 .footer-contacts__title {
   font-size: 48px;
   text-transform: uppercase;
+  line-height: 140%;
 }
 
 .footer-contacts__adress, .footer-contacts__phone, .footer-contacts__email {
@@ -876,6 +895,10 @@ a {
   text-decoration: underline;
   margin: 20px 0;
   line-height: 140%;
+}
+
+.footer-contacts-btn {
+  margin: 50px 0;
 }
 
 @media screen and (max-width: 1200px) {
