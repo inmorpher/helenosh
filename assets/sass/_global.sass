@@ -1,7 +1,7 @@
 *, *:before, *:after
     padding: 0
     margin: 0
-
+    scroll-behavior: smooth
 body
     font-family: 'Montserrat', sans-serif
     font-weight: 400
@@ -44,6 +44,82 @@ a
     margin-top: 30px
     text-align: center
     font-size: 14px
+
+.modal
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #0000007c
+    visibility: hidden
+    opacity: 0
+    transition: .3s ease-out
+    &__visible
+        visibility: visible
+        opacity: 1
+    &__window
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        width: 400px
+        height: 350px
+        background: #dbdbdb
+        box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.1)
+        border-radius: 15px
+        label
+            visibility: hidden
+    .close
+        position: absolute
+        display: block
+        top: 5%
+        right: 5%
+        padding: 4px 10px
+        background: var(--bg-color)
+        border-radius: 50%
+        color: #dbdbdb
+    &-input
+        padding: 0 20px
+        width: 299px
+        height: 54px
+        border: none
+        box-shadow: none
+        border-radius: 50px
+        outline: none
+        font-size: 24px
+        text-transform: uppercase
+        font-style: italic
+        &::placeholder
+            font-weight: 400
+            color: #dbdbdb
+    &__btn
+        margin: 25px 0 0 0
+        appearance: none
+
+.agrement
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    height: 200px
+    background: var(--bg-color)
+    text-align: center
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    box-shadow: 0px -9px 10px rgba(0, 0, 0, 0.1)
+    visibility: hidden
+    opacity: 0
+    transition: .3s ease-out
+    &__visible
+        visibility: visible
+        opacity: 1
 @media screen and ( max-width: 1200px )
     .container
         width: 95%
@@ -63,3 +139,10 @@ a
         text-align: center
         padding: 15px 0
         font-size: 24px
+    .modal
+        &__window
+            width: 95%
+        &-input
+            width: 80%
+        &__btn
+            margin: 25px 0 0 0
