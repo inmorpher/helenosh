@@ -5,7 +5,10 @@ const btns = document.querySelectorAll('a.action-btn');
 const modalWindow = document.querySelector('.modal');
 const agrement = document.querySelector('.agrement');
 
-if (!localStorage.agree || Date.now() - localStorage.agree > 360000) {
+if (
+  !localStorage.agree ||
+  (localStorage.agree && Date.now() - localStorage.agree > 360000)
+) {
   agrement.classList.add('agrement__visible');
 }
 
@@ -39,7 +42,9 @@ document.addEventListener('click', event => {
   }
   // SHOW/CLOSE AGREEMNT FORM
   if (event.target.classList.contains('agrement-btn')) {
+    event.preventDefault();
     localStorage.setItem('agree', Date.now());
+    agrement.classList.remove('agrement__visible');
   }
 
   // CLOSE MODAL

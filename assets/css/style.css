@@ -60,11 +60,11 @@ a {
 
 .action-btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 14px 43px;
   border-radius: 50px;
   background: var(--accent-color);
   border: 1px solid var(--accent-color);
-  font-weight: 600;
+  font-weight: 400;
   -webkit-box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.1);
   color: var(--text-color-accent);
@@ -774,6 +774,7 @@ a {
   font-size: 48px;
   line-height: 70px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .comments-wrapper {
