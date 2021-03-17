@@ -1,0 +1,119 @@
+/* HEADER STYLES
+.header
+    position: relative
+    background: var(--bg-color)
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-logo
+        position: relative
+        flex: 3 1 auto
+        align-items: center
+        &__img
+            position: relative
+            width: 380px
+            height: 84px
+            source
+                width: 100px
+
+/* MAIN MENU STYLES
+.main-menu
+    flex: 1 3 auto
+    &__list
+        display: flex
+        justify-content: center
+        list-style-type: none
+    &__item
+        margin: 0 64px 0 0
+    &__link
+        color: var(--text-color)
+        transition: color .2s ease-out
+        &--accent,&:hover
+            color: var(--accent-color)
+
+/* BURGER STYLES */
+.menu-burger
+    position: relative
+    width: 39px
+    height: 30px
+    cursor: pointer
+    outline: none
+    display: none
+    &::before, &::after, span
+        content: ''
+        position: absolute
+        width: 100%
+        height: 3px
+        background: #c4c4c4
+        transition: .2s ease-out
+    &:before
+        top: 0
+    span
+        top: 50%
+        transform: translateY(-50%)
+    &::after
+        bottom: 0
+    &--active
+        span
+            transform: scale(0)
+        &::before
+            top: 13px
+            transform: rotate(45deg)
+        &::after
+            bottom: 14px
+            transform: rotate(-45deg)
+@media screen and ( max-width: 992px )
+    .header
+        &-logo
+            &__img
+                width: 250px
+                height: auto
+    .main-menu
+        &__item
+            margin: 0 32px 0 0
+@media screen and ( max-width: 768px )
+    .header
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        min-height: 60px
+        &-logo
+            &__img
+                width: 200px
+        .container
+            flex-wrap: wrap
+    .main-menu
+        position: absolute
+        top: 60px
+        right: 0
+        width: 50%
+        height: 100vh
+        opacity: 0
+        background: var(--bg-color)
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+        z-index: -999
+        transition: opacity .3s ease-out
+
+        &__list
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &--visible
+            z-index: 1
+            left: 50%
+            opacity: 1
+
+        &__item
+            margin: 15px 0
+        &__link
+            font-size: 18px
+    .menu-burger
+        display: block
+
+@media screen and ( max-width: 480px )
+    .header
+        &-logo
+            &__img
+                width: 220px

@@ -145,8 +145,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
-  height: 350px;
   background: #dbdbdb;
   -webkit-box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.1);
@@ -160,8 +158,8 @@ a {
 .modal .close {
   position: absolute;
   display: block;
-  top: 5%;
-  right: 5%;
+  top: 3%;
+  right: 3%;
   padding: 4px 10px;
   background: var(--bg-color);
   border-radius: 50%;
@@ -169,6 +167,7 @@ a {
 }
 
 .modal-input {
+  margin: 30px 0 0 0;
   padding: 0 20px;
   width: 299px;
   height: 54px;
@@ -244,6 +243,36 @@ a {
   opacity: 1;
 }
 
+.wpcf7 {
+  width: 400px;
+  min-height: 350px;
+  -webkit-transition: height .3s ease;
+  -o-transition: height .3s ease;
+  transition: height .3s ease;
+}
+
+.wpcf7 .ajax-loader {
+  display: block !important;
+  margin: 0 auto;
+}
+
+.wpcf7 p {
+  text-align: center;
+}
+
+.wpcf7-form {
+  padding: 20px 0;
+}
+
+.wpcf7-form-control-wrap {
+  margin: 0 auto;
+}
+
+.wpcf7-form .wpcf7-response-output {
+  margin: 0 0.5em;
+  border-radius: 15px;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     width: 95%;
@@ -272,6 +301,12 @@ a {
     text-align: center;
     padding: 15px 0;
     font-size: 24px;
+  }
+  .wpcf7 {
+    width: 100%;
+  }
+  .wpcf7 p {
+    text-align: center;
   }
   .modal__window {
     width: 95%;
@@ -755,6 +790,7 @@ a {
 
 .review-block-item__img img {
   width: 100%;
+  height: auto;
   border-radius: 15px;
 }
 
@@ -830,6 +866,7 @@ a {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .comments-item-content__name {
